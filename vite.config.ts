@@ -8,13 +8,12 @@ export default defineConfig({
   optimizeDeps: {
     exclude: ['lucide-react'],
   },
-  root: process.cwd(),
   build: {
     outDir: 'dist',
-    rollupOptions: {
-      input: {
-        main: resolve(__dirname, 'index.html'),
-      },
+  },
+  resolve: {
+    alias: {
+      '@': resolve(__dirname, 'src'),
     },
   },
 });
